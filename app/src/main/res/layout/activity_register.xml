@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="16dp"
+    >
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/nombre_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:hint="Nombre del Producto"
+            android:maxLines="1"
+            android:maxLength="100"/>
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/precio_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:hint="Precio del Producto"
+            android:maxLines="1"
+            android:maxLength="10"/>
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/detalles_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine"
+            android:gravity="top"
+            android:hint="Detalles del Producto"
+            android:maxLines="3"
+            android:lines="3"
+            android:maxLength="500"/>
+
+    </android.support.design.widget.TextInputLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableStart="@android:drawable/ic_menu_camera"
+            style="@style/Widget.AppCompat.Button.Borderless.Colored"
+            android:text="Tomar Foto"
+            android:onClick="takePicture"/>
+
+        <ImageView
+            android:id="@+id/imagen_preview"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:scaleType="centerCrop"
+            android:adjustViewBounds="true"
+            android:layout_alignParentEnd="true"
+            android:src="@mipmap/ic_launcher"/>
+
+    </RelativeLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:text="Registrar"
+        android:onClick="callRegister"/>
+
+</LinearLayout>
